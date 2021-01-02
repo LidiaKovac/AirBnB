@@ -1,0 +1,62 @@
+.explore-wrap {
+ width: 100vw;
+ height: 100vh;
+ .explore-body { 
+     padding-top: 130px;
+     margin-left: 135px;
+     margin-right: 135px;
+     display: flex;
+     flex-direction:column ;
+     justify-content: space-evenly
+ }
+ .filters {
+     display: flex;
+     flex-direction: row;
+ }
+ .p {
+     font-size: 12pt;
+ }
+ .h2{
+     font-size: 25pt;
+ }
+ .filter-btn {
+     border-color: gray;
+     margin-right: 7px;
+     margin-top: 25px;
+     margin-bottom: 25px;
+     font-size: 11pt;
+ }
+ .locations-wrap {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+     padding-top: 10px;
+     width: 100%;
+     height: 100vh;
+     .location-clickable-wrap {
+         width: 16vw;
+         height: 280px;
+         background-color: violet;
+         display: flex;
+         flex-direction: column;
+         justify-content:space-between ;
+        .location-clickable {
+            height: 210px;
+            border-radius: 10px;
+            background-color: turquoise;
+    
+         }
+         .rating {
+            font-size: 11pt;
+         }
+         .type-and-location{
+
+         }
+         .name-of-premises {
+
+         }
+     }
+     
+ }
+}

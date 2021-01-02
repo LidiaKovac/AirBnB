@@ -1,0 +1,113 @@
+.search-form-component-location {
+    width: 20vw;
+    height: 40px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        border-style: solid;
+        border-width: 1px;
+            border-color: transparent;
+    &:hover {
+        border-style: solid;
+    border-width: 1px;
+        border-color: lightgrey;
+        
+    }
+    
+
+
+    .location-form-location {
+        width: 27.5%;
+        height: 100%;
+        border-radius: inherit;
+        
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-right: lightgrey;
+        border-right-width: 1px ;
+        border-right-style: solid;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    .check-in-form-location, .guests-form-location {
+        width: 27.5%;
+        height: 100%;
+        border-right: lightgrey;
+        border-right-width: 1px ;
+        border-right-style: solid;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .search-btn-location {
+        width: 30px;
+        height: 30px;
+        align-self: center;
+        margin-left: 20px;
+        border-radius: 35px;
+        background-color: #E41D56;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .search-icon-location {
+            color:white;
+            width: 15px;
+            height: 15px;
+            
+        }
+
+    }
+    .input-form-location {
+        color: grey;
+        border-style: none;
+        
+        margin: 10px;
+        margin-top: 5px;
+    }
+}
+.profile-become-host-location {
+    width: 20vw;
+    display: flex;
+flex-direction: row;
+justify-content: flex-end;
+align-items: center;
+color: black;
+.become-a-host-location {
+    margin-right: 30px ;
+}
+.languages-location {
+    width: 20px;
+    height: 20px;
+}
+.profile-wrap-location {
+    width: 80px;
+    height: 45px;
+    border-radius: 25px;
+    background-color:white;
+    margin-left: 30px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .three-bars-icon-location {
+        color:dimgrey;
+        width: 20px;
+        height: 20px;
+    }
+    .profile-icon-location {
+        color: dimgray;
+        width: 40px;
+        height: 40px;
+    }
+}
+}

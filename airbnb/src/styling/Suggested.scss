@@ -1,0 +1,28 @@
+
+.suggested-wrap {
+    width: 100vw;
+    padding-left: 135px;
+    padding-right: 135px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .location {
+        display: flex;
+    flex-direction: row;
+    width: 20vw;
+    margin-bottom: 10px;
+    .picture-wrap {
+        .picture {
+            width: 75px;
+            border-radius: 10px;
+        }
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+    }
+    }
+}
