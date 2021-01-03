@@ -1,5 +1,5 @@
 import logo from "./logo.svg"
-import "./App.css"
+import "./App.scss"
 import Home from "./components/Home"
 import {
   BrowserRouter as Router,
@@ -8,6 +8,7 @@ import {
   Link
 } from "react-router-dom";
 import Explore from "./components/Explore";
+import InfoLocation from "./components/InfoLocation";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
       </Route>
     <Route exact path='/:location'>
       <Explore/>
+    </Route>
+    <Route exact path='/:location/:premises'>
+      <InfoLocation/>
     </Route>
     </Router>
       

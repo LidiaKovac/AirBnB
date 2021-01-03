@@ -4,6 +4,7 @@ import { Button } from "react-bootstrap";
 import { AiFillStar } from "react-icons/ai";
 import "../styling/Explore.scss";
 import NavLocation from "./Location-SearchBar";
+import {Link} from 'react-router-dom'
 
 class Explore extends React.Component {
   render() {
@@ -43,7 +44,7 @@ class Explore extends React.Component {
             </a>
           </div>
           <div className="locations-wrap">
-            <div className="location-clickable-wrap">
+            <Link to='/:location/:premises'><div className="location-clickable-wrap">
               <div className="location-clickable"></div>
               <div className="rating">
                 <AiFillStar style={{ color: "#FF385C" }} />
@@ -56,6 +57,7 @@ class Explore extends React.Component {
                 [Name of the place]
               </div>
             </div>
+            </Link>
           </div>
         </div>
       </div>
