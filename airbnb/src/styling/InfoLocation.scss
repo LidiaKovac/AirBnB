@@ -1,125 +1,304 @@
-.info-wrap {
-  width: 100%;
-  height: 100vh;
-  margin-left: 225px;
-  margin-right: 225px;
-  padding-top: 110px;
-  .wrap {
-    width: 76%;
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+
+  .info-wrap {
+    width: 100%;
     height: 100vh;
-    padding-left: 135px;
-    padding-right: 135px;
-  }
-  .name {
-    font-size: 20pt;
-    font-weight: bold;
-  }
-  .rating-line {
-    font-size: 11pt;
+    margin-left: 225px;
+    margin-right: 225px;
+    padding-top: 110px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    .save-share {
+    flex-direction: column;
+    .wrap {
+      width: 76%;
+      height: 100vh;
+      padding-left: 135px;
+      padding-right: 135px;
+    }
+    .name {
+      font-size: 20pt;
+      font-weight: bold;
+    }
+    .rating-line {
+      font-size: 11pt;
       display: flex;
       flex-direction: row;
-      justify-content: flex-end;
+      justify-content: space-between;
+      .save-share {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
     }
-  }
-  .showcase {
-    width: 100%;
-    margin-top: 20px;
-    height: 500px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: row;
-    .big-picture {
-      border-radius: inherit;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      width: 50%;
-      height: 100%;
-      padding-right: 5px;
-      img {
+    .showcase {
+      width: 100%;
+      margin-top: 20px;
+      height: 500px;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: row;
+      .big-picture {
+        border-radius: inherit;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        width: 50%;
+        height: 100%;
+        padding-right: 5px;
+        img {
           width: 100%;
           height: 100%;
           object-fit: cover;
           padding: 5px;
           border-top-left-radius: inherit;
           border-bottom-left-radius: inherit;
+        }
+      }
+      .small-pictures {
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        img {
+          width: 48%;
+          height: 48%;
+          margin: 5px;
+          object-fit: cover;
+          &:nth-of-type(2) {
+            border-top-right-radius: 20px;
+          }
+          &:nth-of-type(4) {
+            border-bottom-right-radius: 20px;
+          }
+        }
       }
     }
-    .small-pictures {
-      width: 50%;
+    .type-and-host {
+      font-size: 22px;
+      font-weight: bold;
+      padding-top: 30px;
+    }
+    .guests-and-rooms {
+      font-size: 16px;
+      padding-top: 8px;
+    }
+    .host-details {
+      font-size: 14px;
+      &:hover {
+        text-decoration: underline;
+      }
+      color: grey;
+      font-weight: bold;
+    }
+    .info-row {
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
-      img {
-        width: 48%;
-        height: 48%;
-        margin: 5px;
-        object-fit: cover;
-        &:nth-of-type(2) {
-            border-top-right-radius: 20px;
-        }
-        &:nth-of-type(4) {
-            border-bottom-right-radius: 20px;
+      justify-content: space-between;
+    }
+    .info-col {
+      width: 60%;
+    }
+    .check-if-available {
+      width: 35%;
+      height: 300px;
+      position: sticky;
+      margin-top: 50px;
+      top: 100px;
+      background-color: white;
+      border-radius: 20px;
+      -webkit-box-shadow: 10px 10px 48px -18px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 10px 10px 48px -18px rgba(0, 0, 0, 0.75);
+      box-shadow: 10px 10px 48px -18px rgba(0, 0, 0, 0.75);
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      align-items: center;
+      .row-availability {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .form-row-check-in-out {
+        padding-top: 25px;
+        .date-picker {
+          height: 50px;
+          border-style: solid;
+          border-color: dimgrey;
+          border-width: 1px;
+          &:first-of-type {
+            border-top-left-radius: 15px;
+            border-right: none;
+          }
+          &:last-of-type {
+            border-top-right-radius: 15px;
+          }
         }
       }
+      .check-btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        height: 50px;
+        width: 93.7%;
+        margin: 10px;
+        color: white;
+        font-weight: bold;
+        background-color: #ff385c;
+      }
+      .guests-counter {
+        width: 338px;
+        height: 50px;
+        border-style: solid;
+        border-color: dimgrey;
+        border-width: 1px;
+        border-top: none;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+      }
+      .text {
+        font-size: 22px;
+        width: 50%;
+      }
+      .rating-check-available {
+        font-size: 11pt;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        padding-left: 90px;
+      }
     }
-    
-  }
-  .type-and-host {
-    font-size: 22px;
-    font-weight:bold;
-    padding-top: 30px;
-}
-.guests-and-rooms {
-    font-size: 16px;
-    padding-top: 8px;
-}
-.host-details {
-    font-size: 14px;
-    &:hover {
-        text-decoration: underline;
-    }
-    color: grey;
-    font-weight: bold;
-  
-}
-.info-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.info-col {
-    width: 50%;
-}
-.check-if-available {
-    width: 50%;
-}
-.services {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    .single-service {
+    .services {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      .single-service {
         display: flex;
         flex-direction: row;
         align-items: center;
         padding-top: 50px;
         .icon {
-            width: 30px;
-            height: 30px;
-            margin-right: 20px;
+          width: 30px;
+          height: 30px;
+          margin-right: 20px;
         }
         .title {
-            font-weight: bold;
-            padding-bottom: 10px;
-            font-size: 16px;
+          font-weight: bold;
+          padding-bottom: 10px;
+          font-size: 16px;
         }
         .description {
-            font-size: 14px;
-            color: dimgray;
+          font-size: 14px;
+          color: dimgray;
         }
+      }
     }
+  }
+  .reviews-wrap {
+    width: 62%;
+    height: 400px;
+    margin-left: 360px;
+    margin-right: 360px;
+    margin-top: 420px;
+    .reviews-header {
+      padding-top: 20px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .reviews-average {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .pb {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .rating-average {
+        width: 40%;
+        margin-right: 50px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .type-of-rating {
+          font-size: 16px;
+        }
+        .average-rating-pb {
+          width: 150px;
+          height: 5px;
+          background-color: lightgray!important;
+          margin-right: 20px;
+          margin-left: 20px;
+          
+        }
+        .progress-bar {
+         background-color: black   
+        }
+        .rating-label {
+          font-size: 12px;
+          font-weight: bold;
+        }
+      }
+    }
+    
+  }
+  .reviews-showdown {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-left: 360px;
+    padding-right: 360px;
+    .review-single {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      .review-single-header {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .reviews-pp {
+          width: 70px;
+          height: 70px;
+          object-fit: cover;
+          border-radius: 35px;
+          margin: 10px;
+        }
+        .name {
+          font-size: 16px;
+          font-weight: bold;
+        }
+        .review-date {
+          color: dimgray
+        }
+        
+      }
+      
+    }
+    .review-text {
+      width: 500px;
+      height: 200px;
+      margin-left: 10px;
+      overflow-wrap: anywhere;
+    white-space: pre-wrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    }
+  }
 }
+.map {
+  width: 62%;
+  height: 500px;
+  margin-left: 360px;
+    margin-right: 360px;
+
 }
