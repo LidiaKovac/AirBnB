@@ -77,6 +77,7 @@
       font-size: 22px;
       font-weight: bold;
       padding-top: 30px;
+      text-transform: capitalize;
     }
     .guests-and-rooms {
       font-size: 16px;
@@ -163,9 +164,11 @@
       }
       .rating-check-available {
         font-size: 11pt;
-        width: 50%;
+        width: 60%;
+        height: 30px;
         display: flex;
         flex-direction: row;
+        align-items: center;
         padding-left: 90px;
       }
     }
@@ -185,6 +188,7 @@
         }
         .title {
           font-weight: bold;
+          text-transform: capitalize;
           padding-bottom: 10px;
           font-size: 16px;
         }
@@ -200,7 +204,8 @@
     height: 400px;
     margin-left: 360px;
     margin-right: 360px;
-    margin-top: 420px;
+    margin-top: 450px;
+    margin-bottom: 70px;
     .reviews-header {
       padding-top: 20px;
       font-size: 22px;
@@ -257,6 +262,10 @@
     padding-right: 360px;
     .review-single {
       width: 50%;
+      height: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
       display: flex;
       flex-direction: column;
       padding: 20px;
@@ -300,5 +309,4 @@
   height: 500px;
   margin-left: 360px;
     margin-right: 360px;
-
 }

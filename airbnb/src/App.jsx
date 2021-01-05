@@ -1,14 +1,13 @@
-import logo from "./logo.svg"
+
 import "./App.scss"
 import Home from "./components/Home"
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Explore from "./components/Explore";
 import InfoLocation from "./components/InfoLocation";
+import AddHouse from "./components/AddHouse"
 
 function App() {
   return (
@@ -20,8 +19,11 @@ function App() {
     <Route exact path='/:location'>
       <Explore/>
     </Route>
-    <Route exact path='/:location/:premises'>
+    <Route exact path='/:location/:id'>
       <InfoLocation/>
+    </Route>
+    <Route exact path='/:location/0/add'>
+      <AddHouse/>
     </Route>
     </Router>
       

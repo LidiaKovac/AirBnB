@@ -1,7 +1,6 @@
 import React from "react";
 import "../styling/SearchForm.scss";
 import { IoSearch } from "react-icons/io5";
-import { Button } from "react-bootstrap";
 
 class SearchForm extends React.Component {
   render() {

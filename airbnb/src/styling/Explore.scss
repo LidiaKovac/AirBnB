@@ -18,6 +18,15 @@
  }
  .h2{
      font-size: 25pt;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: nowrap;
+     width: 80%;
+     font-weight: bold;
+     .city {
+         text-transform: capitalize;
+         padding-left: 7px;
+     }
  }
  .filter-btn {
      border-color: gray;
@@ -25,6 +34,20 @@
      margin-top: 25px;
      margin-bottom: 25px;
      font-size: 11pt;
+ }
+ .add-btn {
+    border-color: white;
+    color: white;
+    background-color: #E41D56;
+    margin-right: 7px;
+    margin-top: 8px;
+    margin-left: 8px;
+    font-size: 11pt;
+    width: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
  }
  .locations-wrap {
      display: flex;
@@ -36,19 +59,30 @@
      height: 100vh;
      .location-clickable-wrap {
          width: 16vw;
-         height: 280px;
-         background-color: violet;
          display: flex;
          flex-direction: column;
          justify-content:space-between ;
+         padding: 10px;
+         .type-and-location {
+            text-transform: capitalize;
+        }
         .location-clickable {
-            height: 210px;
             border-radius: 10px;
-            background-color: turquoise;
-    
+            a {
+                color: black!important
+            }
+            img { 
+                height: 210px;
+                width: 100%;
+                border-radius: inherit;
+            }
+            
          }
          .rating {
             font-size: 11pt;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
          }
         
      }

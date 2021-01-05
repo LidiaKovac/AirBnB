@@ -2,6 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styling/NavLocation.scss";
 import Logo from "../assets/logo-pink.png";
+import {Link} from 'react-router-dom'
 import { BiGlobe } from "react-icons/bi";
 import { VscThreeBars } from "react-icons/vsc";
 import { IoPersonCircleSharp, IoSearch } from "react-icons/io5";
@@ -11,7 +12,7 @@ class NavLocation extends React.Component {
     return (
       <div className="nav-wrap">
         <div className="logo-wrap">
-          <img src={Logo} alt="airbnb" className="logo" />
+        <Link to='/'><img src={Logo} alt="airbnb" className="logo" /> </Link>  
         </div>
         <div className="search-form-component-location">
           <div className="location-form-location">
