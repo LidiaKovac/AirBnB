@@ -4,7 +4,8 @@ This project is part of my journey at [Strive School](https://strive.school).\
 Our teacher assistant [Ubeyt](https://github.com/ubeytdemirr) gave us this challenge to review all past topics. \
 As for most coding project, this will be (hopefully) be updated and fixed. \
 Started: **Dec 2020** \
-Challenge due: **5 Jan 2021** \ 
+Challenge due: **5 Jan 2021** \
+
 Link to backend repo: [LidiaKovac/AirBnB-BE](https://github.com/LidiaKovac/AirBnB-BE) \
 
 ##Features still missing: 
