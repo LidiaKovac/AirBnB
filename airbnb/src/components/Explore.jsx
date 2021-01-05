@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
 import { AiFillStar } from "react-icons/ai";
 import "../styling/Explore.scss";
+import uniqid from 'uniqid'
 import NavLocation from "./Location-SearchBar";
 import { Link, withRouter } from "react-router-dom";
 import { BiMessageAltError } from "react-icons/bi";
@@ -118,7 +119,7 @@ class Explore extends React.Component {
           <div className="h2">
             <div>Stays in </div>{" "}
             <div className="city">{this.props.match.params.location}</div>
-            <Link to={"/" + this.props.match.params.location + "/0/add"}>
+            <Link to={"/" + this.props.match.params.location + "/" + uniqid() + "/add"}>
               <Button variant="light" className="rounded-pill add-btn">
                 +
               </Button>{" "}
@@ -174,7 +175,7 @@ class Explore extends React.Component {
                       <div className="location-clickable">
                         <img
                           alt="img"
-                          src={url ? url[0] : "https://placehold.it/500x700"}
+                          src={url.length > 0 ? url[0] : "https://placehold.it/500x700"}
                           style={{ objectFit: "cover" }}
                         />
                       </div>

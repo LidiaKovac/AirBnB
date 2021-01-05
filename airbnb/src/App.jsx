@@ -22,7 +22,7 @@ function App() {
     <Route exact path='/:location/:id'>
       <InfoLocation/>
     </Route>
-    <Route exact path='/:location/0/add'>
+    <Route exact path='/:location/:id/add'>
       <AddHouse/>
     </Route>
     </Router>
