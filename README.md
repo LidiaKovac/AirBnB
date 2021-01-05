@@ -5,6 +5,7 @@ Our teacher assistant [Ubeyt](https://github.com/ubeytdemirr) gave us this chall
 As for most coding project, this will be (hopefully) be updated and fixed. \
 Started: **Dec 2020** \
 Challenge due: **5 Jan 2021** \ 
+Link to backend repo: [LidiaKovac/AirBnB-BE](https://github.com/LidiaKovac/AirBnB-BE)
 
 ##Features still missing: 
 -Add photos to houses (only possible through postman) **ISSUE: file is undefined in response, possibly an API problem** \
