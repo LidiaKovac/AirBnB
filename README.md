@@ -8,16 +8,18 @@ Challenge due: **5 Jan 2021**
 
 Link to backend repo: [LidiaKovac/AirBnB-BE](https://github.com/LidiaKovac/AirBnB-BE) 
 
-##Features still missing: 
+## Features still missing:
+
 -Add photos to houses (only possible through postman) **ISSUE: file is undefined in response, possibly an API problem** \
 -Add photos to reviews (same as above, only there is no endpoint for it becacuse I wasn't successful in making the first one work) \ 
 -Login function 
 -Search function 
 -Book with dates (you can book and unbook) 
 -Email (API seems to go through but you never get the email, code looks fine, but my sendgrid account seems to be suspended. Still have to try with a brand new one.)
--PDF/CVS export functions 
+-PDF/CVS export functions.\
 
-##Notes: 
+## Notes: 
+
 -This was my first project using flex-grid! I was really used to just position: absolute everything and then make several media queries, \ 
 but I am now free of all nighters trying to make a website reponsive :D \
 -Wherever you see "NaN" in the screenshots I still need to put a conditional render on the ratings. \
