@@ -27,29 +27,29 @@ class AddHouse extends React.Component {
 
   };
   handleImages = async (e) => {
-     this.setState({images: e.target.files[0]}, ()=> console.log(this.state.images))
-      let image = new FormData()
-      image.append("img", this.state.images)
+    this.setState({ images: e.target.files[0] }, () => console.log(this.state.images))
+    let image = new FormData()
+    image.append("img", this.state.images)
     await this.setState({ img: image }, () =>
-    console.log(this.state.images)
-  );
+      console.log(this.state.images)
+    );
     try {
-        await fetch(
-            "http://localhost:3001/houses/" +
-              this.props.match.params.location + "/" +
-              this.props.match.params.id +
-              "/upload",
-            {
-              method: "POST",
-              body: this.state.img              
-              },
-            
-          );
+      await fetch(
+        "https://airbnb-be-strive-lk.herokuapp.com/houses/" +
+        this.props.match.params.location + "/" +
+        this.props.match.params.id +
+        "/upload",
+        {
+          method: "POST",
+          body: this.state.img
+        },
+
+      );
     } catch (error) {
-        console.log(error)
+      console.log(error)
     }
-    
-    
+
+
   };
 
   handleChange = (e) => {
@@ -86,7 +86,7 @@ class AddHouse extends React.Component {
 
   postHouse = async () => {
     try {
-      const response = await fetch("http://localhost:3001/houses", {
+      const response = await fetch("https://airbnb-be-strive-lk.herokuapp.com/houses", {
         method: "POST",
         body: JSON.stringify(this.state.newHouse),
         headers: {
@@ -239,7 +239,7 @@ class AddHouse extends React.Component {
                   />
                 </Form>
               </Form.Group>
-              <Button variant="primary" className="add-btn" onClick={()=>this.postHouse()}>
+              <Button variant="primary" className="add-btn" onClick={() => this.postHouse()}>
                 Submit
               </Button>
             </Form>

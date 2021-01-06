@@ -39,10 +39,10 @@ class InfoLocation extends React.Component {
     };
     try {
       await fetch(
-        "http://localhost:3001/houses/" +
-          this.props.match.params.location +
-          "/" +
-          this.props.match.params.id,
+        "https://airbnb-be-strive-lk.herokuapp.com/houses/" +
+        this.props.match.params.location +
+        "/" +
+        this.props.match.params.id,
         {
           method: "PUT",
           body: JSON.stringify(body),
@@ -57,7 +57,7 @@ class InfoLocation extends React.Component {
   };
   getRating = async () => {
     let reviewsDB = await fetch(
-      "http://localhost:3001/reviews/" + this.props.match.params.id
+      "https://airbnb-be-strive-lk.herokuapp.com/reviews/" + this.props.match.params.id
     );
     if (reviewsDB.ok) {
       let reviews = await reviewsDB.json();
@@ -79,10 +79,10 @@ class InfoLocation extends React.Component {
     };
     try {
       const response = await fetch(
-        "http://localhost:3001/houses/" +
-          this.props.match.params.location +
-          "/" +
-          this.props.match.params.id,
+        "https://airbnb-be-strive-lk.herokuapp.com/houses/" +
+        this.props.match.params.location +
+        "/" +
+        this.props.match.params.id,
         {
           method: "PUT",
           body: JSON.stringify(body),
@@ -97,10 +97,10 @@ class InfoLocation extends React.Component {
   };
   getDetails = async () => {
     let housesRes = await fetch(
-      "http://localhost:3001/houses/" +
-        this.props.match.params.location +
-        "/" +
-        this.props.match.params.id
+      "https://airbnb-be-strive-lk.herokuapp.com/houses/" +
+      this.props.match.params.location +
+      "/" +
+      this.props.match.params.id
     );
     let house = await housesRes.json();
     this.setState({ house: house[0] });
@@ -114,7 +114,7 @@ class InfoLocation extends React.Component {
 
   getPictures = async () => {
     let images = await fetch(
-      "http://localhost:3001/files/" + this.props.match.params.id
+      "https://airbnb-be-strive-lk.herokuapp.com/files/" + this.props.match.params.id
     );
 
     let imageDB = await images.json();
@@ -139,7 +139,7 @@ class InfoLocation extends React.Component {
 
   postReview = async () => {
     const response = await fetch(
-      "http://localhost:3001/reviews/"+ this.props.match.params.id, 
+      "https://airbnb-be-strive-lk.herokuapp.com/reviews/" + this.props.match.params.id,
       {
         method: "POST",
         body: JSON.stringify(this.state.newReview),
@@ -287,11 +287,11 @@ class InfoLocation extends React.Component {
                   onClick={
                     !this.state.house.isBooked
                       ? () => {
-                          this.bookHouse();
-                        }
+                        this.bookHouse();
+                      }
                       : () => {
-                          this.cancelBooking();
-                        }
+                        this.cancelBooking();
+                      }
                   }
                 >
                   <div>
