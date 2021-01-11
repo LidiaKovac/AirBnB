@@ -35,7 +35,7 @@ class AddHouse extends React.Component {
     );
     try {
       await fetch(
-        "https://airbnb-be-strive-lk.herokuapp.com/houses/" +
+        "http://localhost:3001/houses/" +
         this.props.match.params.location + "/" +
         this.props.match.params.id +
         "/upload",
@@ -86,7 +86,7 @@ class AddHouse extends React.Component {
 
   postHouse = async () => {
     try {
-      const response = await fetch("https://airbnb-be-strive-lk.herokuapp.com/houses", {
+      const response = await fetch("http://localhost:3001/houses", {
         method: "POST",
         body: JSON.stringify(this.state.newHouse),
         headers: {
