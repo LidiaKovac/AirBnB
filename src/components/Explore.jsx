@@ -17,7 +17,7 @@ class Explore extends React.Component {
   };
   showAvailable = async () => {
     let housesRes = await fetch(
-      "http://localhost:3001/" + this.props.match.params.location
+      "https://airbnb-be-strive-lk.herokuapp.com/" + this.props.match.params.location
     );
     if (housesRes.ok) {
       let houses = await housesRes.json();
@@ -27,7 +27,7 @@ class Explore extends React.Component {
     } else {
       alert("something went wrong while fetching available houses");
     }
-    let images = await fetch("http://localhost:3001/files");
+    let images = await fetch("https://airbnb-be-strive-lk.herokuapp.com/files");
 
     let imageDB = await images.json();
     let url = [];
@@ -40,7 +40,7 @@ class Explore extends React.Component {
   };
   showBooked = async () => {
     let housesRes = await fetch(
-      "http://localhost:3001/" + this.props.match.params.location
+      "https://airbnb-be-strive-lk.herokuapp.com/" + this.props.match.params.location
     );
     if (housesRes.ok) {
       let houses = await housesRes.json();
@@ -50,7 +50,7 @@ class Explore extends React.Component {
     } else {
       alert("something went wrong while fetching booked houses");
     }
-    let images = await fetch("http://localhost:3001/files");
+    let images = await fetch("https://airbnb-be-strive-lk.herokuapp.com/files");
 
     let imageDB = await images.json();
     let url = [];
@@ -63,7 +63,7 @@ class Explore extends React.Component {
   };
   showAll = async () => {
     let housesRes = await fetch(
-      "http://localhost:3001/houses/" + this.props.match.params.location
+      "https://airbnb-be-strive-lk.herokuapp.com/houses/" + this.props.match.params.location
     );
     if (housesRes.ok) {
       let houses = await housesRes.json();
@@ -72,7 +72,7 @@ class Explore extends React.Component {
     } else {
       alert("something went wrong while fetching houses");
     }
-    let images = await fetch("http://localhost:3001/files");
+    let images = await fetch("https://airbnb-be-strive-lk.herokuapp.com/files");
 
     let imageDB = await images.json();
     let url = [];
@@ -90,7 +90,7 @@ class Explore extends React.Component {
     let avgArr = [];
     await this.state.houses.forEach(async (house) => {
       //literally the worst implementation of it all
-      let reviewsDB = await fetch("http://localhost:3001/reviews/" + house.id);
+      let reviewsDB = await fetch("https://airbnb-be-strive-lk.herokuapp.com/reviews/" + house.id);
       if (reviewsDB.ok) {
         let reviews = await reviewsDB.json();
         console.log(reviews);
