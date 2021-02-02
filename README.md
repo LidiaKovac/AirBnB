@@ -8,22 +8,22 @@ Challenge due: **5 Jan 2021**
 
 Link to backend repo: [LidiaKovac/AirBnB-BE](https://github.com/LidiaKovac/AirBnB-BE) 
 
-## Features still missing:
+## Next implementations: 
+- Add photos using file upload and cloudinary
+- Login function
+- Search function
+- Send email with PDF review of the booking
+- **MIGRATION ON SQL!**
 
--Add photos to houses (only possible through postman) **ISSUE: file is undefined in response, possibly an API problem** \
--Add photos to reviews (same as above, only there is no endpoint for it becacuse I wasn't successful in making the first one work) \ 
--Login function 
--Search function 
--Book with dates (you can book and unbook) 
--Email (API seems to go through but you never get the email, code looks fine, but my sendgrid account seems to be suspended. Still have to try with a brand new one.)
--PDF/CVS export functions.\
+![SQL Schema](https://imgur.com/yGWI969.jpg)
 
 ## Notes: 
 
--This was my first project using flex-grid! I was really used to just position: absolute everything and then make several media queries, \ 
-but I am now free of all nighters trying to make a website reponsive :D \
+-This was my first project using flex-grid! I was really used to just *position: absolute* everything and then write several media queries, \ 
+but I am now free of all nighters trying to make a website reponsive.\
 -Wherever you see "NaN" in the screenshots I still need to put a conditional render on the ratings. \
--The AddHouse component is madeup basing on AirBnB color scheme.\
+-The AddHouse component is made-up based on AirBnB color scheme.
+
 
 ## Screenshots (AirBnb Clone): 
 ![ScreenShot1](https://imgur.com/pzX2luP.png)
