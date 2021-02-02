@@ -13,7 +13,7 @@ Link to backend repo: [LidiaKovac/AirBnB-BE](https://github.com/LidiaKovac/AirBn
 - Login function
 - Search function
 - Send email with PDF review of the booking
-- **MIGRATION ON SQL!**
+- _NEW! FEBRUARY 2021_: **MIGRATION ON SQL!**
 
 ![SQL Schema](https://imgur.com/yGWI969.jpg)
 
