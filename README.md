@@ -14,8 +14,14 @@ Link to backend repo: [LidiaKovac/AirBnB-BE](https://github.com/LidiaKovac/AirBn
 - Search function
 - Send email with PDF review of the booking
 - _NEW! FEBRUARY 2021_: **MIGRATION ON SQL!**
+<details>
+  <summary>Old DB design version: </summary>
+  
+  ![SQL Schema](https://imgur.com/yGWI969.jpg)
+  
+  </details>
 
-![SQL Schema](https://imgur.com/yGWI969.jpg)
+![SQL Schema](https://imgur.com/merJeTK.png)
 
 ## Notes: 
 
