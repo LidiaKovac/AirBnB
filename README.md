@@ -12,7 +12,7 @@ Link to backend repo: [LidiaKovac/AirBnB-BE](https://github.com/LidiaKovac/AirBn
 - Add photos using file upload and cloudinary
 - Login function
 - Search function
-- Send email with PDF review of the booking
+- ~Send email~ with PDF review of the booking
 - _NEW! FEBRUARY 2021_: **MIGRATION ON SQL!**
 <details>
   <summary>Old DB design version: </summary>
