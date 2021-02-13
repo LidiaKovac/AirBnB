@@ -3,9 +3,9 @@
     height: 70px;
     background-color: white;
     border-radius: 35px;
-    -webkit-box-shadow: 0px 0px 62px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 62px -6px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 62px -6px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 62px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 62px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 62px -6px rgba(0, 0, 0, 0.75);
     display: flex;
     flex-direction: row;
 
@@ -16,23 +16,27 @@
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px;
         border-right: lightyellow;
-        border-right-width: 1px ;
+        border-right-width: 1px;
         border-right-style: solid;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
+
     }
-    .check-in-form, .check-out-form, .guests-form {
+
+    .check-in-form,
+    .check-out-form,
+    .guests-form {
         width: 20%;
         height: 100%;
         border-right: lightyellow;
-        border-right-width: 1px ;
+        border-right-width: 1px;
         border-right-style: solid;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
+
     .search-btn {
         width: 50px;
         height: 50px;
@@ -44,21 +48,26 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        margin: 10px;
+
         .search-icon {
             color: white;
             width: 20px;
             height: 20px;
-            
+
+
         }
 
     }
+
     .input-form {
         color: grey;
         border-style: none;
-        
+
         margin: 10px;
         margin-top: 5px;
     }
+
     .title-form {
         font-size: 9pt;
         font-weight: bold;
