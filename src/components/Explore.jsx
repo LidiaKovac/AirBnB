@@ -6,7 +6,6 @@ import "../styling/Explore.scss";
 import uniqid from 'uniqid'
 import NavLocation from "./Location-SearchBar";
 import { Link, withRouter } from "react-router-dom";
-import { BiMessageAltError } from "react-icons/bi";
 
 class Explore extends React.Component {
   state = {
@@ -17,9 +16,9 @@ class Explore extends React.Component {
   };
   showAvailable = async () => {
     let housesRes = await fetch(
-      "https://airbnb-be-strive-lk.herokuapp.com/" + this.props.match.params.location
+      process.env.REACT_APP_BE_URL + this.props.match.params.location
     );
-    if (housesRes.ok) {
+    if (housesRes.length>0) {
       let houses = await housesRes.json();
       let available = houses.filter((house) => house.isBooked === false);
       this.setState({ houses: available });
@@ -27,22 +26,12 @@ class Explore extends React.Component {
     } else {
       alert("something went wrong while fetching available houses");
     }
-    let images = await fetch("https://airbnb-be-strive-lk.herokuapp.com/files");
-
-    let imageDB = await images.json();
-    let url = [];
-    console.log(imageDB);
-    imageDB.forEach((img) => {
-      url.push(img);
-    });
-
-    this.setState({ images: url }, () => console.log(this.state.images));
   };
   showBooked = async () => {
     let housesRes = await fetch(
-      "https://airbnb-be-strive-lk.herokuapp.com/" + this.props.match.params.location
+      process.env.REACT_APP_BE_URL + this.props.match.params.location
     );
-    if (housesRes.ok) {
+    if (housesRes.length>0) {
       let houses = await housesRes.json();
       let booked = houses.filter((house) => house.isBooked === true);
       this.setState({ houses: booked });
@@ -50,20 +39,10 @@ class Explore extends React.Component {
     } else {
       alert("something went wrong while fetching booked houses");
     }
-    let images = await fetch("https://airbnb-be-strive-lk.herokuapp.com/files");
-
-    let imageDB = await images.json();
-    let url = [];
-    console.log(imageDB);
-    imageDB.forEach((img) => {
-      url.push(img);
-    });
-
-    this.setState({ images: url }, () => console.log(this.state.images));
   };
   showAll = async () => {
     let housesRes = await fetch(
-      "https://airbnb-be-strive-lk.herokuapp.com/houses/" + this.props.match.params.location
+      process.env.REACT_APP_BE_URL + "houses/" + this.props.match.params.location
     );
     if (housesRes.ok) {
       let houses = await housesRes.json();
@@ -72,16 +51,6 @@ class Explore extends React.Component {
     } else {
       alert("something went wrong while fetching houses");
     }
-    let images = await fetch("https://airbnb-be-strive-lk.herokuapp.com/files");
-
-    let imageDB = await images.json();
-    let url = [];
-    console.log(imageDB);
-    imageDB.forEach((img) => {
-      url.push(img);
-    });
-
-    this.setState({ images: url }, () => console.log(this.state.images));
   };
 
 
@@ -90,8 +59,8 @@ class Explore extends React.Component {
     let avgArr = [];
     await this.state.houses.forEach(async (house) => {
       //literally the worst implementation of it all
-      let reviewsDB = await fetch("https://airbnb-be-strive-lk.herokuapp.com/reviews/" + house.id);
-      if (reviewsDB.ok) {
+      let reviewsDB = await fetch(process.env.REACT_APP_BE_URL + "reviews/" + house.id);
+      if (reviewsDB.length>0) {
         let reviews = await reviewsDB.json();
         console.log(reviews);
         let ratarr = reviews.map((rev) => rev.rating)
@@ -159,23 +128,23 @@ class Explore extends React.Component {
             </a>
           </div>
           <div className="locations-wrap">
-            {this.state.images &&
+            {
               this.state.houses.map((house, index) => {
-                let image = this.state.images.filter(
-                  (img) => img.id === house.id
-                );
+                //let image = this.state.images.filter(
+                //   (img) => img.id === house.id
+                // );
                 // let firstimg = image[0]
-                let url = [];
-                image.map((img) => url.push(img.img));
+                //let url = [];
+                //image.map((img) => url.push(img.img));
                 return (
                   <Link
-                    to={"/" + house.address.city.toLowerCase() + "/" + house.id}
+                    to={"/" + house.city.toLowerCase() + "/" + house.id}
                   >
                     <div className="location-clickable-wrap">
                       <div className="location-clickable">
                         <img
                           alt="img"
-                          src={url.length > 0 ? url[0] : "https://placehold.it/500x700"}
+                          src={house.img ? house.img : "https://placehold.it/500x700"}
                           style={{ objectFit: "cover" }}
                         />
                       </div>
@@ -184,7 +153,7 @@ class Explore extends React.Component {
                         <strong>{this.state.ratings[index]} </strong>&nbsp;∙ {this.state.lenght[index]} ratings
                       </div>
                       <div className="type-and-location">
-                        {house.house} ∙ {house.address.city}
+                        {house.type} ∙ {house.city}
                       </div>
                       <div className="name-of-premises">{house.title}</div>
                     </div>

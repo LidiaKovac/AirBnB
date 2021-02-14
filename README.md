@@ -7,13 +7,15 @@ Started: **Dec 2020** \
 Challenge due: **5 Jan 2021** 
 
 Link to backend repo: [LidiaKovac/AirBnB-BE](https://github.com/LidiaKovac/AirBnB-BE) 
-
+ _NEW 14/2/21!_: 
+- Backend has been moved to SQL.
+- Started frontend implementation for SQL changes.
 ## Next implementations: 
 - Add photos using file upload and cloudinary
 - Login function
 - Search function
 - ~Send email with review of the booking~
-- ~MIGRATION ON SQL!~ 
+- ~MIGRATION ON SQL!~  
 <details>
   <summary>Old DB design version: </summary>
   

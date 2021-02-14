@@ -8,48 +8,44 @@ import Navigation from "./Navigation";
 class AddHouse extends React.Component {
   state = {
     newHouse: {
-      address: {
-        street: "",
-        city: this.props.match.params.location,
-        "zip code": "",
-        country: "",
-      },
+      street: "",
+      city: this.props.match.params.location,
+      "zip_code": "",
+      "province_county": '',
+      country: "",
       title: "",
       description: "",
       price: 0,
       rooms: 0,
-      house: "",
       facilities: "",
       host: "",
-      isBooked: false,
-      id: this.props.match.params.id,
-    }
-
+      type: '',
+      img: ''
+    },
   };
   handleImages = async (e) => {
-    this.setState({ images: e.target.files[0] }, () => console.log(this.state.images))
-    let image = new FormData()
-    image.append("img", this.state.images)
-    await this.setState({ img: image }, () =>
+    this.setState({ images: e.target.files[0] }, () =>
       console.log(this.state.images)
     );
+    let image = new FormData();
+    image.append("img", this.state.images);
+    await this.setState({ img: image }, () => console.log(this.state.images));
     try {
       await fetch(
-        "https://airbnb-be-strive-lk.herokuapp.com/houses/" +
-        this.props.match.params.location + "/" +
-        this.props.match.params.id +
-        "/upload",
+        process.env.REACT_APP_BE_URL +
+          "houses/" +
+          this.props.match.params.location +
+          "/" +
+          this.props.match.params.id +
+          "/upload",
         {
           method: "POST",
-          body: this.state.img
-        },
-
+          body: this.state.img,
+        }
       );
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-
-
   };
 
   handleChange = (e) => {
@@ -86,7 +82,7 @@ class AddHouse extends React.Component {
 
   postHouse = async () => {
     try {
-      const response = await fetch("https://airbnb-be-strive-lk.herokuapp.com/houses", {
+      const response = await fetch(process.env.REACT_APP_BE_URL + "houses", {
         method: "POST",
         body: JSON.stringify(this.state.newHouse),
         headers: {
@@ -239,7 +235,11 @@ class AddHouse extends React.Component {
                   />
                 </Form>
               </Form.Group>
-              <Button variant="primary" className="add-btn" onClick={() => this.postHouse()}>
+              <Button
+                variant="primary"
+                className="add-btn"
+                onClick={() => this.postHouse()}
+              >
                 Submit
               </Button>
             </Form>
