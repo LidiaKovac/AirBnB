@@ -15,6 +15,7 @@ Link to backend repo: [LidiaKovac/AirBnB-BE](https://github.com/LidiaKovac/AirBn
 - Add photos using file upload and cloudinary
 - Login function
 - Search function
+- Auth
 <details>
   <summary>Old DB design version: </summary>
   

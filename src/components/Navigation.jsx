@@ -26,7 +26,7 @@ class Navigation extends React.Component {
             <BiGlobe className='languages'/>
             <div className='profile-wrap'>
                 <VscThreeBars className='three-bars-icon'/>
-                <IoPersonCircleSharp className='profile-icon'/>
+              <Link to='/admin/manage/login'><IoPersonCircleSharp className='profile-icon'/></Link>  
             </div>
         </div>
       </div>

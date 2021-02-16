@@ -8,6 +8,7 @@ import {
 import Explore from "./components/Explore";
 import InfoLocation from "./components/InfoLocation";
 import AddHouse from "./components/AddHouse"
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
     </Route>
     <Route exact path='/:location/:id/add'>
       <AddHouse/>
+    </Route>
+    <Route exact path='/admin/manage/login'>
+      <Login/>
     </Route>
     </Router>
       
