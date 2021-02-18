@@ -2,36 +2,38 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../../styling/Login.scss";
+import Google from '../../assets/google-logo.png'
+import Facebook from '../../assets/fb-logo.png'
+import GitHub from '../../assets/github-logo.png'
+import LinkedIn from '../../assets/linkedin-logo.png'
 import { useHistory, Link } from "react-router-dom";
 import Loader from "../Loader";
+import axios from 'axios'
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [pass, setPW] = useState("");
   const [loading, setLoading] = useState(false);
   const history = useHistory();
-  const login = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    const base64data = btoa(email + ":" + pass); // encoding in base64
-    const resp = await fetch("http://localhost:3001/user/login/me", {
+  const login = async ()=> {
+    const res = await axios(`${process.env.REACT_APP_BE_URL}login`, {
+      method: 'POST',
       headers: {
-        Authorization: "Basic " + base64data,
+        "Content-Type": "application/json"
       },
-    });
+      data: {
+        email, pass
+      }, withCredentials: true // use cookies
+    })
 
-    if (resp.ok) {
-      setLoading(false);
-      localStorage.setItem("base64", base64data);
-      history.push("/");
-    }
-  };
+    localStorage.setItem("accessToken", res.data.accessToken)
+  }
   return (
     <div className="login-wrap">
       {loading ?  
-     <> <div>Loggin-in, please wait</div>
+    
       <Loader/> 
-    </>
+    
       :
       <Form>
         <Form.Group>
@@ -65,9 +67,15 @@ const Login = () => {
           />
         </Form.Group>
         <Button variant="primary" type="submit" onClick={(e) => login(e)}>
-          Submit
+          Login
         </Button>
+        
         <br/>
+        <div className='d-block text-center'>- or -</div> <br/>
+      <div className='d-flex text-center justify-content-around'> <a  href={`${process.env.REACT_APP_BE_URL}user/login/google`}><img src={Google} alt='google-login' className='login-logo'/></a> 
+        <img src={Facebook} alt='google-login' className='login-logo'/> 
+        <img src={LinkedIn} alt='google-login' className='login-logo'/> 
+        <img src={GitHub} alt='google-login' className='login-logo'/></div> <br/>
         <Link  className='new-to-airbnb text-center' to='/admin/manage/new'>New to AirBnB?</Link>
         <div><small>Forgot your password? That's too bad man.</small></div>
       </Form>}
