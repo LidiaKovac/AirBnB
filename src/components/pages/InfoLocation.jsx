@@ -1,10 +1,10 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Form, Button, Col } from "react-bootstrap";
-import "../styling/InfoLocation.scss";
+import "../../styling/InfoLocation.scss";
 import moment from "moment";
-import NavLocation from "./Location-SearchBar";
-import ProPic from "../assets/propic.png";
+import NavLocation from "../Location-SearchBar";
+import ProPic from "../../assets/propic.png";
 import {
   IoShareOutline,
   IoCalendarOutline,
@@ -75,6 +75,10 @@ class InfoLocation extends React.Component {
     } else {
       this.setState({ reviews: "No reviews" });
     }
+    let userDB = await fetch(process.env.REACT_APP_BE_URL + 'user/', {
+      method: 'GET', 
+      headers: {authorization: `Basic ${localStorage.getItem('base64')}`}
+    })
   };
   getDetails = async () => {
     let housesRes = await fetch(

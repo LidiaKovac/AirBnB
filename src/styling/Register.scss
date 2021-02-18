@@ -1,0 +1,27 @@
+.register-wrap {
+    .login-wrap {
+        width: 100vw;
+        height: 100vh;
+        background-image: url("../assets/bgAdd.png");
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .already-on-airbnb {
+            color: #ff385c;
+            font-weight: bold;
+        }
+        .button-submit {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .btn-sub {
+                background-color: #ff385c;
+                border: none
+            }
+        }
+        
+      }
+      
+}

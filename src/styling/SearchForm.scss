@@ -1,68 +1,75 @@
 .search-form-component {
-    width: 45vw;
-    height: 70px;
-    background-color: white;
-    border-radius: 35px;
-    -webkit-box-shadow: 0px 0px 62px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 62px -6px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 62px -6px rgba(0,0,0,0.75);
+  width: 700px;
+  height: 70px;
+  position: sticky;
+  top: 100px;
+  background-color: white;
+  border-radius: 35px;
+  -webkit-box-shadow: 0px 0px 62px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 62px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 62px -6px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 20px;
+  padding-right: 20px;
+  .location-form {
+    width: 230px;
+    height: 100%;
+    border-radius: inherit;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: lightyellow;
+    border-right-width: 1px;
+    border-right-style: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .check-in-form,
+  .check-out-form,
+  .guests-form {
+    width: 120px;
+    height: 100%;
+    border-right: lightyellow;
+    border-right-width: 1px;
+    border-right-style: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .search-btn {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    align-self: center;
+    // //margin-left: 20px;
+    // margin-right: 25px;
+    border-radius: 25px;
+    background-color: #e41d56;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .search-icon {
+      color: white;
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .input-form {
+    color: grey;
+    border-style: none;
 
-    .location-form {
-        width: 30%;
-        height: 100%;
-        border-radius: inherit;
-        border-top-right-radius: 0px;
-        border-bottom-right-radius: 0px;
-        border-right: lightyellow;
-        border-right-width: 1px ;
-        border-right-style: solid;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        
-    }
-    .check-in-form, .check-out-form, .guests-form {
-        width: 20%;
-        height: 100%;
-        border-right: lightyellow;
-        border-right-width: 1px ;
-        border-right-style: solid;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .search-btn {
-        width: 50px;
-        height: 50px;
-        align-self: center;
-        margin-left: 20px;
-        border-radius: 35px;
-        background-color: #E41D56;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        .search-icon {
-            color: white;
-            width: 20px;
-            height: 20px;
-            
-        }
-
-    }
-    .input-form {
-        color: grey;
-        border-style: none;
-        
-        margin: 10px;
-        margin-top: 5px;
-    }
-    .title-form {
-        font-size: 9pt;
-        font-weight: bold;
-        margin: 10px;
-        margin-bottom: 0;
-    }
+    margin: 10px;
+    margin-top: 5px;
+  }
+  .title-form {
+    font-size: 9pt;
+    font-weight: bold;
+    margin: 10px;
+    margin-bottom: 0;
+  }
 }

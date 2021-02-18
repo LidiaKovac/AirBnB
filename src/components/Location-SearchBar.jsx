@@ -8,9 +8,12 @@ import { VscThreeBars } from "react-icons/vsc";
 import { IoPersonCircleSharp, IoSearch } from "react-icons/io5";
 
 class NavLocation extends React.Component {
+  state={
+    query: ''
+  }
   render() {
     return (
-      <div className="nav-wrap">
+      <div className="nav-wrap" style={{backgroundColor: 'white', height: '90px'}}>
         <div className="logo-wrap">
         <Link to='/'><img src={Logo} alt="airbnb" className="logo" /> </Link>  
         </div>
@@ -19,22 +22,13 @@ class NavLocation extends React.Component {
             <input
               className="input-form-location ml-3"
               type="text"
-              placeholder="Place"
-            />
-          </div>
-          <div className="check-in-form-location">
-            <input className="input-form-location" type="date" />
-          </div>
-
-          <div className="guests-form-location">
-            <input
-              className="input-form-location"
-              type="number"
-              placeholder="Add guests"
+              placeholder="Start searching..."
+              value={this.state.query}
+              onChange={(e)=> this.setState({query: e.currentTarget.value})}
             />
           </div>
           <div className="search-btn-location">
-            <IoSearch className="search-icon-location" />
+            <IoSearch className="search-icon-location" onClick={()=>this.props.getQ(this.state.query)} />
           </div>
         </div>
         <div className="profile-become-host-location">
@@ -42,7 +36,7 @@ class NavLocation extends React.Component {
           <BiGlobe className="languages-location" />
           <div className="profile-wrap-location">
             <VscThreeBars className="three-bars-icon-location" />
-            <IoPersonCircleSharp className="profile-icon-location" />
+            <Link to={localStorage.getItem('base64') ? "/genova" : "/admin/manage/login"}><IoPersonCircleSharp className='profile-icon-location'/></Link>
           </div>
         </div>
       </div>

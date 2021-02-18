@@ -2,9 +2,9 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
 import { AiFillStar } from "react-icons/ai";
-import "../styling/Explore.scss";
+import "../../styling/Explore.scss";
 import uniqid from 'uniqid'
-import NavLocation from "./Location-SearchBar";
+import NavLocation from "../Location-SearchBar";
 import { Link, withRouter } from "react-router-dom";
 
 class Explore extends React.Component {
@@ -69,9 +69,7 @@ class Explore extends React.Component {
         avgArr.push(average)
         this.setState({ ratings: avgArr }, () => console.log("Rating averages: ", this.state.ratings))
         this.setState({ lenght: lenght }, () => console.log("Index of ratings", this.state.lenght))
-      } else {
-        alert("Something went wrong");
-      }
+      } 
     });
 
   }

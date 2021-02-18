@@ -1,14 +1,15 @@
 
 import "./App.scss"
-import Home from "./components/Home"
+import Home from "./components/pages/Home"
 import {
   BrowserRouter as Router,
   Route
 } from "react-router-dom";
-import Explore from "./components/Explore";
-import InfoLocation from "./components/InfoLocation";
-import AddHouse from "./components/AddHouse"
-import Login from "./components/Login";
+import Explore from "./components/pages/Explore";
+import InfoLocation from "./components/pages/InfoLocation";
+import AddHouse from "./components/pages/AddHouse"
+import Login from "./components/pages/Login";
+import Register from "./components/pages/SignUp";
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
     </Route>
     <Route exact path='/admin/manage/login'>
       <Login/>
+    </Route>
+    <Route exact path ='/admin/manage/new'>
+      <Register/>
     </Route>
     </Router>
       
