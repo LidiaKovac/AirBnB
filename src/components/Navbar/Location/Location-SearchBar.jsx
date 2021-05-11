@@ -1,7 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../styling/NavLocation.scss";
-import Logo from "../assets/logo-pink.png";
+import "./NavLocation.scss";
+import Logo from "../../../assets/logo-pink.png";
 import {Link} from 'react-router-dom'
 import { BiGlobe } from "react-icons/bi";
 import { VscThreeBars } from "react-icons/vsc";

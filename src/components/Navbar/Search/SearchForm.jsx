@@ -1,5 +1,5 @@
 import React from "react";
-import "../styling/SearchForm.scss";
+import "./SearchForm.scss";
 import { IoSearch } from "react-icons/io5";
 
 class SearchForm extends React.Component {

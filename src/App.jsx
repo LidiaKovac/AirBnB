@@ -1,15 +1,15 @@
 
 import "./App.scss"
-import Home from "./components/pages/Home"
+import Home from "./pages/Home/Home"
 import {
   BrowserRouter as Router,
   Route
 } from "react-router-dom";
-import Explore from "./components/pages/Explore";
-import InfoLocation from "./components/pages/InfoLocation";
-import AddHouse from "./components/pages/AddHouse"
-import Login from "./components/pages/Login";
-import Register from "./components/pages/SignUp";
+import Explore from "./pages/Explore/Explore";
+import InfoLocation from "./pages/Location/InfoLocation";
+import AddHouse from "./pages/AddHouse/AddHouse"
+import Login from "./pages/Login/Login";
+import Register from "./pages/SignUp/SignUp";
 
 function App() {
   return (

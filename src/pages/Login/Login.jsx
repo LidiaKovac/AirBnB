@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../../styling/Login.scss";
+import "./Login.scss";
 import Google from '../../assets/google-logo.png'
 import Facebook from '../../assets/fb-logo.png'
 import GitHub from '../../assets/github-logo.png'
 import LinkedIn from '../../assets/linkedin-logo.png'
 import { useHistory, Link } from "react-router-dom";
-import Loader from "../Loader";
+import Loader from "../../components/Loader/Loader";
 import axios from 'axios'
 
 const Login = () => {

@@ -2,9 +2,9 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
 import { AiFillStar } from "react-icons/ai";
-import "../../styling/Explore.scss";
+import "./Explore.scss";
 import uniqid from 'uniqid'
-import NavLocation from "../Location-SearchBar";
+import NavLocation from "../../components/Navbar/Location/Location-SearchBar";
 import { Link, withRouter } from "react-router-dom";
 
 class Explore extends React.Component {

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "../../styling/Register.scss";
+import "./Register.scss";
 import { Link, useHistory } from "react-router-dom";
 import { Form, Button, Row } from "react-bootstrap";
-import Loader from "../Loader";
+import Loader from "../../components/Loader/Loader.jsx";
 const Register = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");

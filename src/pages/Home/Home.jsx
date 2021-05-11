@@ -1,11 +1,11 @@
 import React from "react";
-import "../../styling/Home.scss";
+import "./Home.scss";
 import { Button } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import SearchForm from "../SearchForm";
-import Navigation from "../Navigation";
-import Suggested from "../Suggested";
-import NavLocation from "../Location-SearchBar";
+import SearchForm from "../../components/Navbar/Search/SearchForm";
+import Navigation from "../../components/Navbar/Default/Navigation";
+import Suggested from "../../components/Suggested/Suggested";
+import NavLocation from "../../components/Navbar/Location/Location-SearchBar";
 import { withRouter } from "react-router-dom";
 import stringSimilarity from 'string-similarity'
 

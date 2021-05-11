@@ -1,9 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Form, Row, Col, Button } from "react-bootstrap";
-import "../../styling/AddHouse.scss";
+import { Form, Col, Button } from "react-bootstrap";
+import "./AddHouse.scss";
 import { withRouter } from "react-router-dom";
-import Navigation from "../Navigation";
+import Navigation from "../../components/Navbar/Default/Navigation";
 
 class AddHouse extends React.Component {
   state = {

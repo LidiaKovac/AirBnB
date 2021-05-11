@@ -1,6 +1,5 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../styling/Loading.scss";
+import "./Loading.scss";
 
 const Loader = () => {
   return (

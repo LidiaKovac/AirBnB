@@ -1,9 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Form, Button, Col } from "react-bootstrap";
-import "../../styling/InfoLocation.scss";
+import "./InfoLocation.scss";
 import moment from "moment";
-import NavLocation from "../Location-SearchBar";
+import NavLocation from "../../components/Navbar/Location/Location-SearchBar";
 import ProPic from "../../assets/propic.png";
 import {
   IoShareOutline,
